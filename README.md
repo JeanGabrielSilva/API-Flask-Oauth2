@@ -58,6 +58,9 @@ Criação de uma página web simples para exibir os resultados de busca de dados
 
 <h1>Vídeo de exemplo do projeto</h1>
 
+https://github.com/JeanGabrielSilva/API-Flask-Oauth2/assets/107358955/8f382668-5e36-4044-9634-c2b485a19c90
+
+
 
 
 
