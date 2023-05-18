@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logado!</title>
+    <style>
+
+        body {
+            background: linear-gradient(to bottom, #000000, #0088ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: left;
+            border-radius: 30px; 
+        }
+
+        h1 {
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 30px; 
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <button onclick="window.location.href = '/dashboard';">Ir para business</button>
+        <h2> Contato </h2>
+        {% if contact %}
+            <h1>Id: {{contact.contact.id}}</h1>
+            <h1>Nome: {{contact.contact.name}}</h1>
+            <h1>Company Name: {{contact.contact.companyName}}</h1>
+            <h1>Email: {{contact.contact.email}}</h1>
+            <h1>Website: {{contact.contact.website}}</h1>
+            <h1>Gender: {{contact.contact.gender}}</h1>
+            <h1>City: {{contact.contact.city}}</h1>
+            
+        {%else%}
+            <h1>Usuário não está logado</h1>       
+        {%endif%}
+        
+    </div>
+</body>
+</html>

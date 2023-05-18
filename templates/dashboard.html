@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logado!</title>
+    <style>
+
+        body {
+            background: linear-gradient(to bottom, #000000, #0088ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: left;
+            border-radius: 30px; 
+        }
+
+        h1 {
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 30px; 
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="window.location.href = '/contatos';">Ir para contato</button>
+        <h2> Business </h2>
+        {% if business %}
+            <h1>Usuário Logado Atualmente</h1>    
+            <h1>Token: {{token}}</h1>
+            <h1>Nome: {{business.business.name}}</h1>
+            <h1>Email: {{business.business.email}}</h1>
+            <h1>Website: {{business.business.website}}</h1>
+            <h1>Country: {{business.business.country}}</h1>
+            <h1>CreatedAt: {{business.business.createdAt}}</h1>
+            <h1>UpdatedAt: {{business.business.updatedAt}}</h1>
+        {%else%}
+            <h1>Usuário não está logado</h1>       
+        {%endif%}
+        
+    </div>
+</body>
+</html>
